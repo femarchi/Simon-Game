@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<!-- 
+	META TAGS 
+-->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Mobile First -->
+	<meta name="description" content="Simon's game, a project for the freecodecamp.com front-end web developer course">
+	<meta name="keywords" content="web developer freecodecamp javascript simon game">
+	<meta name="author" content="Felipe Marchi">
+		
+	<title>
+
+		Simon's Game
+
+	</title>
+
+<!-- 
+	IMPORTS
+-->
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Stylesheet Link -->
+	<link rel="stylesheet" href="stylesheet.css" type="text/css">
+	
+
+</head>
+
+<body>
+
+		<div id="app-wrapper">
+
+			<div id="btn-red" class="btn-mem"></div>
+			<div id="btn-blue" class="btn-mem"></div>
+			<div id="btn-yellow" class="btn-mem"></div>
+			<div id="btn-green" class="btn-mem"></div>
+
+			<div id="display">
+				<p>--</p>
+			</div>
+
+			<svg id="svg-box" viewbox="0 0 800 800" preserveAspectRatio="xMidYMid meet">
+				<path id="clickarea-green" 
+								d="M32, 385 
+										l195, 0
+										a180,180 0 0,1 158,-160
+										l0, -195
+										a370,370 0 0,0 -353,355
+										z"
+								 />
+				<path id="clickarea-red" 
+								d="M573, 385 
+										l195, 0
+										a370,370 0 0,0 -353,-355
+										l0,195
+										a180, 180, 0 0,1 158,160
+										z" 
+								 />
+				<path id="clickarea-blue" 
+								d="M573, 412 
+										l195, 0
+										a370,370 0 0,1 -353,355
+										l0,-195
+										a180, 180, 0 0,0 158,-160
+										z" 
+								 />
+				<path id="clickarea-yellow" 
+								d="M32, 412 
+										l195, 0
+										a180, 180, 0 0,0 158,160
+										l0,195
+										a370,370 0 0,1 -353,-355
+										z" 
+								 />
+
+				<defs>
+    			<radialGradient id="strict-gradient">
+      			<stop offset="25%" stop-color="#e6c200"></stop>
+      			<stop offset="70%" stop-color="#ffe100"></stop>
+      			<stop offset="80%" stop-color="#fbe737"></stop>
+      			<stop offset="100%" stop-color="#c9a501"></stop>
+    			</radialGradient>
+    			<radialGradient id="strict-gradient-push">
+      			<stop offset="25%" stop-color="#d8b500"></stop>
+      			<stop offset="65%" stop-color="#f1d300"></stop>
+      			<stop offset="80%" stop-color="#fbe737"></stop>
+      			<stop offset="92%" stop-color="#c9a501"></stop>
+      			<stop offset="100%" stop-color="#393501"></stop>
+    			</radialGradient>
+    			<radialGradient id="start-gradient">
+      			<stop offset="25%" stop-color="#d60000"></stop>
+      			<stop offset="70%" stop-color="#e80000"></stop>
+      			<stop offset="80%" stop-color="#f00000"></stop>
+      			<stop offset="100%" stop-color="#a90001"></stop>
+    			</radialGradient>
+    			<radialGradient id="start-gradient-push">
+      			<stop offset="25%" stop-color="#d60000"></stop>
+      			<stop offset="65%" stop-color="#e80000"></stop>
+      			<stop offset="80%" stop-color="#f00037"></stop>
+      			<stop offset="92%" stop-color="#a90001"></stop>
+      			<stop offset="100%" stop-color="#370001"></stop>
+    			</radialGradient>
+  			</defs>
+
+  			<circle id="clickarea-strict"
+								cx="313" cy="435" r="28.5"
+								 />
+				<circle id="clickarea-start"
+								cx="398" cy="435" r="28.5"
+								 />
+
+			</svg>
+			
+		</div>
+		<!-- End of app-wrapper -->
+
+</body>
+
+<!--
+ SCRIPTS
+-->
+		
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+
+	<!-- Howler JS (sounds) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.js"></script>
+
+	<!-- Custom Script -->
+	<script src="script.js"></script>
+	
+
+
+</html>
